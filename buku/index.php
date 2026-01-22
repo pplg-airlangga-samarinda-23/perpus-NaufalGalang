@@ -32,12 +32,17 @@ $books = $koneksi->execute_query($sql)->fetch_all(MYSQLI_ASSOC);
                     <td><?= $book['pengarang'] ?></td>
                     <td><?= $book['stok'] ?></td>
 
-                        <a href="edit.php?id=<?= $book['id'] ?>">Edit</a>
+                    <td>
+                        <a href="edit.php?id=<?= $book['id']; ?>">Edit</a>
                         <a href="delete.php?id=<?= $book['id'] ?>">Hapus</a>
+            
+                    </td>
                     </td>
                 </tr>
+                
                 <?php endforeach ?>
         </table>
+            </tbody>
     
 </body>
 </html>
